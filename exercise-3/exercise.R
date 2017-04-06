@@ -2,18 +2,26 @@
 
 # Create a vector `marbles` with 6 different colors in it (representing marbles)
 
+marbles <- c("white", "black", "blue", "red", "purple", "gold")
 
 # Use the `sample` function to select a single marble
 
+sample(marbles)[1]
 
 # Write a function MarbleGame that does the following:
 # - Takes in a `guess` of a marble color
 # - Randomly samples a marble
 # - Returns whether or not the person guessed accurately (preferrably a full phrase)
 
+MarbleGame <- function(guess) {
+  temp <- sample(marbles)[1]
+  return(temp == guess)
+}
 
 # Play the marble game!
 
+dawgs <- "purple"
+MarbleGame(dawgs)
 
 # Bonus: Play the marble game until you win, keeping track of how many tries you take
 
